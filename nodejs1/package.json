@@ -1,0 +1,17 @@
+{
+  "name": "nodejs1",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "4.16.1",
+    "react": "^16.13.1"
+  },
+  "devDependencies": {
+    "jest": "26.2.2"
+  }
+}

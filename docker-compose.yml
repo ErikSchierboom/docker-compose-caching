@@ -1,0 +1,27 @@
+version: "3.2"
+services:
+  nodejs1:
+    build:
+      context: ./nodejs1
+    ports:
+      - 55555:8080
+    volumes:
+      - node_modules:/usr/src/app/node_modules/
+      - yarn:/usr/src/cache/yarn
+    environment:
+      - YARN_CACHE_FOLDER=/usr/src/cache/yarn
+
+  nodejs2:
+    build:
+      context: ./nodejs2
+    ports:
+      - 55556:8080
+    volumes:
+      - node_modules:/usr/src/app/node_modules/
+      - yarn:/usr/src/cache/yarn
+    environment:
+      - YARN_CACHE_FOLDER=/usr/src/cache/yarn
+
+volumes:
+  node_modules:
+  yarn:
