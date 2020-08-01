@@ -22,6 +22,27 @@ services:
     environment:
       - YARN_CACHE_FOLDER=/usr/src/cache/yarn
 
+  ruby1:
+    build:
+      context: ./ruby1
+    ports:
+      - 55557:4567
+    volumes:
+      - bundle:/usr/src/cache/bundle
+    environment:
+      - BUNDLE_PATH=/usr/src/cache/bundle
+
+  ruby2:
+    build:
+      context: ./ruby2
+    ports:
+      - 55558:4567
+    volumes:
+      - bundle:/usr/src/cache/bundle
+    environment:
+      - BUNDLE_PATH=/usr/src/cache/bundle
+
 volumes:
   node_modules:
   yarn:
+  bundle:
