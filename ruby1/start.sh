@@ -1,3 +1,4 @@
-# bundle install
-# ruby server.rb
-echo 'hello'
+#!/bin/sh
+
+bundle install
+bundle exec ruby server.rb

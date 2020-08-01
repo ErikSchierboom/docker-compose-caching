@@ -1,2 +1,4 @@
+#!/bin/sh
+
 bundle install
-ruby server.rb
+bundle exec ruby server.rb
